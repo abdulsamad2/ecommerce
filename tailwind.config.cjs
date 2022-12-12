@@ -1,0 +1,13 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      backgroundImage: {
+        hero: "url('../src/images/slider-bg.jpg')",
+        arrival: "url('../src/images/arrival-bg.jpg')",
+      },
+    },
+  },
+  plugins: [],
+};
