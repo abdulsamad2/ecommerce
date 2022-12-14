@@ -2,7 +2,9 @@ import React from "react";
 import Hero from "./Hero";
 import NewArrival from "./NewArrival";
 import Whyus from "./Whyus";
-import Products from "./Products";
+import Subscribe from "./Subscribe";
+import Testimonial from "./Testimonial";
+import Products from "../productpage/Products";
 
 const Homepage = () => {
   return (
@@ -11,6 +13,8 @@ const Homepage = () => {
       <Whyus />
       <NewArrival />
       <Products />
+      <Subscribe />
+      <Testimonial />
     </>
   );
 };

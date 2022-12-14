@@ -28,10 +28,10 @@ const SingleProduct = (props) => {
       <div className='flex flex-col absolute top-full  left-1/2 space-y-4 -translate-x-1/2 group-hover:inset-y-1/4 group-hover:opacity-100 duration-300 '>
         <button
           onClick={addToCartHandler}
-          className='py-2 px-6 text-white rounded-full border-2 border-red-600 bg-red-600 hover:text-red-600 hover:bg-transparent '>
+          className='py-2 px-4 md:px-6 text-white rounded-full border-2 border-red-600 bg-red-600 hover:text-red-600 hover:bg-transparent '>
           Add to Cart
         </button>
-        <button className='py-2 px-6 text-white rounded-full border-black border-2 bg-gray-900 hover:text-black hover:bg-transparent'>
+        <button className='py-2 px-4 md:px-6 text-white rounded-full border-black border-2 bg-gray-900 hover:text-black hover:bg-transparent'>
           Buy Now
         </button>
       </div>

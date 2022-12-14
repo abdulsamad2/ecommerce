@@ -31,6 +31,22 @@ export const cartSlice = createSlice({
         existingItem.quantity++;
       }
     },
+    removeFromCart: (state, actions) => {
+      const productId = actions.payload;
+      const existingItem = state.items.find(
+        (item) => item.productId === productId
+      );
+      state.cart -= 1;
+      if (existingItem.quantity === 1) {
+        state.items = state.items.filter(
+          (item) => item.productId !== productId
+        );
+      } else {
+        existingItem.totalPrice =
+          existingItem.totalPrice - existingItem.productPrice;
+        existingItem.quantity -= 1;
+      }
+    },
   },
 });
 

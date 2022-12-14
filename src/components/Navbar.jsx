@@ -4,6 +4,8 @@ import OffCanvas from "./OffCanvas";
 import { useSelector, useDispatch } from "react-redux";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 import { actions } from "../store/OffSlice";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   const cartCount = useSelector((state) => state.cart.cart);
 
@@ -23,12 +25,20 @@ const Navbar = () => {
             alt=''
           />
         </div>
-        <div className='md:flex relative gap-10 hidden items-center'>
-          <ul className='flex gap-10 font-bold text-xl uppercase'>
-            <li className='hover:text-orange-600 cursor-pointer'>Home</li>
-            <li className='hover:text-orange-600 cursor-pointer'>Products</li>
-            <li className='hover:text-orange-600 cursor-pointer'>Blog</li>
-            <li className='hover:text-orange-600 cursor-pointer'>Contact</li>
+        <div className='md:flex relative gap-10  items-center'>
+          <ul className='md:flex hidden gap-10 font-bold text-xl uppercase'>
+            <li className='hover:text-orange-600 cursor-pointer'>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>
+            <li className='hover:text-orange-600 cursor-pointer'>
+              <NavLink to={"/products"}>Products</NavLink>
+            </li>
+            <li className='hover:text-orange-600 cursor-pointer'>
+              <NavLink to={"/blog"}>Blog</NavLink>
+            </li>
+            <li className='hover:text-orange-600 cursor-pointer'>
+              <NavLink to={"/contact"}>Contact</NavLink>
+            </li>
           </ul>
           <div
             onClick={sideCardHandler}
@@ -37,8 +47,6 @@ const Navbar = () => {
             <span className='absolute  text-center text-white bg-red-600 rounded-full h-4 w-4 -mt-2 ml-3 text-xs'>
               {cartCount}
             </span>
-
-            <AiOutlineSearch size={20} />
           </div>
         </div>
       </nav>
