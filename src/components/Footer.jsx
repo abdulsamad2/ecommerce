@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 const Footer = () => {
   return (
     <div className='bg-stone-100 py-14'>
-      <footer className='max-w-[1140px] space-y-14 md:space-y-0 px-4 items-center flex-col md:flex-row flex justify-between mx-auto'>
+      <footer className='max-w-[1140px] space-y-14 md:space-y-0 px-4 items-center flex-col md:flex-row flex justify-between md:mx-auto'>
         {/* Fist Col */}
         <div className='space-y-4'>
           <img

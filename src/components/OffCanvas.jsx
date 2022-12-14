@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../store/OffSlice";
 import OffMenuList from "./OffMenuList";
 import { GrClose } from "react-icons/gr";
-import data from "../ProductData";
+import { NavLink } from "react-router-dom";
 
 const OffCanvas = (props) => {
   let subTotal;
@@ -58,15 +58,23 @@ const OffCanvas = (props) => {
           element
         )}
       </div>
-      <div className='mt-auto w-[100%] px-4 mb-6'>
-        <div className='flex justify-between py-4 font-bold text-lg'>
-          <p>Subtotal:</p>
-          <p>${subTotal}</p>
+      {cartItem.length > 0 ? (
+        <div className='mt-auto w-[100%] px-4 mb-10 md:mb-6'>
+          <div className='flex justify-between py-4 font-bold text-lg'>
+            <p>Subtotal:</p>
+            <p>${subTotal}</p>
+          </div>
+          <NavLink
+            onClick={sideCardHandler}
+            to={"/checkout"}>
+            <button className='bg-red-500 px-6 py-3 font-semibold text-white w-full '>
+              Checkout
+            </button>
+          </NavLink>
         </div>
-        <button className='bg-red-500 px-6 py-3 font-semibold text-white w-full '>
-          Checkout
-        </button>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

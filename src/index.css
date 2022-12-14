@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.css-13cymwt-control {
+  border: none !important;
+}

@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage/Homepage";
 import { Route, Routes } from "react-router-dom";
 import Productpage from "./pages/productpage/Productpage";
 import Contact from "./pages/contact/Contact";
+import Checkout from "./pages/checkoutpage/Checkout";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           <Route
             path='/contact'
             element={<Contact />}
+          />
+          <Route
+            path='/checkout'
+            element={<Checkout />}
           />
         </Routes>
       </main>
